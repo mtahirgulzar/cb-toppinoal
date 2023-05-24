@@ -60,8 +60,6 @@ export async function getStaticProps(context) {
     } catch (err) {
         console.log("dynamic page error", err);
     }
-
-
     return {
         props: {
             singleBlog: singleBlog?.data?.attributes || null,
