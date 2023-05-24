@@ -1,0 +1,377 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.services-pagination {
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+	color: #963a2f;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.services-pagination .paginate-previous-link {
+	margin-right: 5px;
+}
+.services-pagination .paginate-link {
+	margin: 0px 5px;
+}
+
+.services-pagination .paginate-next-link {
+	margin-left: 5px;
+}
+.selected {
+	font-weight: 600;
+}
+
+.card-container,
+.front,
+.back {
+	width: 100%;
+	height: 17rem;
+}
+
+.front,
+.back {
+	box-sizing: border-box;
+	padding: 2rem;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.back {
+	background-color: #7f7c59;
+}
+
+.card-container {
+	position: relative;
+}
+.front,
+.back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	overflow: hidden;
+	transition: transform 0.8s ease;
+}
+.back {
+	transform: rotateX(180deg);
+}
+.card-container:hover .front {
+	transform: rotateX(-180deg);
+}
+.card-container:hover .back {
+	transform: rotateX(0deg);
+}
+
+.card-container {
+	perspective: 75rem;
+}
+.cus-contact-body p {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #605c44;
+	margin-bottom: 30px;
+}
+.cus-contact-body h3 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	color: #605c44;
+	margin-bottom: 30px;
+}
+.cus-contact-body h2 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #605c44;
+	margin-bottom: 15px;
+}
+.cus-contact-body a {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #d58258;
+	display: block;
+}
+
+/* 
+.Testimonial-Carousal .slick-dots {
+  bottom: -90px !important;
+} */
+/* .Testimonial-Carousal .slick-dots li button:before{
+  font-size:10px;
+  color:#304659;
+  opacity:100
+}
+
+.Testimonial-Carousal .slick-dots li.slick-active button:before{
+  color:#304659;
+  opacity:.25
+} */
+
+.cus-image-slider .slick-slide img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cus-blog-body p {
+	font-size: 16px;
+	line-height: 32px;
+	color: #605c44;
+	margin-bottom: 14.5px;
+}
+.cus-blog-body li {
+	font-size: 16px;
+	line-height: 32px;
+	color: #605c44;
+}
+.cus-blog-body img {
+	float: right;
+	margin: 20px;
+}
+.cus-blog-body a {
+	font-size: 16px;
+	line-height: 32px;
+	color: #d58258;
+	margin-bottom: 14.5px;
+}
+
+.cus-blog-body h4 {
+	font-size: 1em;
+	line-height: 29px;
+	color: #605c44;
+	font-weight: bolder;
+	margin: 8px 0 16px;
+}
+.cus-blog-body h5 {
+	font-size: 20px;
+	line-height: 50px;
+	color: #605c44;
+	font-weight: 500;
+	margin: 8px 0 16px;
+}
+
+.cus-blog-body a {
+	text-decoration: underline;
+}
+
+.cus-blog-body h6 {
+	font-size: 16px;
+	line-height: 30px;
+	color: #605c44;
+	font-weight: 500;
+	margin: 8px 0 16px;
+}
+
+.cus-blog-body h2 {
+	font-size: 1.5em;
+	font-weight:600;
+}
+
+.cus-blog-body h1 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.cus-blog-body h3 {
+	font-size: 1.17em;
+	font-weight: 700;
+}
+
+.cus-service-body h2:first-of-type {
+	font-size: 26px;
+	line-height: 26px;
+	color: #963a2f;
+	font-weight: 600;
+	margin-top: 5px;
+	margin-bottom: 65px;
+	padding-bottom: 12px;
+	border-bottom: 3px solid #963a2f;
+	text-align: center;
+}
+.cus-service-body h2 {
+	font-size: 20px;
+	line-height: 24px;
+	color: #605c44;
+	font-weight: 500;
+	/* margin: 8px 0 16px; */
+}
+.cus-service-body p {
+	font-size: 16px;
+	line-height: 24px;
+	color: #605c44;
+	margin: 0 0 14.4px;
+}
+.cus-service-body h4 {
+	font-size: 20px;
+	line-height: 24px;
+	color: #605c44;
+	font-weight: 500;
+	margin: 8px 0 16px;
+}
+.cus-service-body h5 {
+	font-size: 20px;
+	line-height: 24px;
+	color: #605c44;
+	font-weight: 500;
+	margin: 8px 0 16px;
+}
+
+.cus-service-body a {
+	font-size: 16px;
+	line-height: 30px;
+	color: #d58258;
+	font-weight: 500;
+}
+.cus-service-body h6 {
+	font-size: 16px;
+	line-height: 30px;
+	color: #605c44;
+	font-weight: 500;
+}
+.cus-service-body img {
+	float: right;
+	margin: 20px 20px 60px 20px;
+}
+.cus-patients-body img {
+	float: right;
+	margin: 20px;
+}
+
+.cus-patients-body h2:first-child {
+	font-size: 26px;
+	line-height: 26px;
+	color: #963a2f;
+	font-weight: 600;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #963a2f;
+	text-align: center;
+}
+.cus-patients-body h2 {
+	font-size: 20px;
+	line-height: 24px;
+	color: #605c44;
+	font-weight: 500;
+	margin: 8px 0 16px;
+}
+.cus-patients-body h6 {
+	font-size: 16px;
+	line-height: 30px;
+	color: #605c44;
+	font-weight: 500;
+}
+
+.cus-patients-body a {
+	text-decoration: underline;
+}
+
+.cus-patients-body a {
+	font-size: 16px;
+	line-height: 30px;
+	color: #d58258;
+	font-weight: 500;
+}
+.cus-patients-body p {
+	font-size: 16px;
+	line-height: 24px;
+	color: #605c44;
+	margin: 0 0 14.4px;
+}
+.cus-patients-body h5 {
+	font-size: 20px;
+	line-height: 24px;
+	color: #605c44;
+	font-weight: 500;
+	margin: 8px 0 16px;
+}
+
+.App {
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1040;
+	width: 100vw;
+	height: 100vh;
+	background-color: #605c44;
+	opacity: 0.3;
+}
+
+.modal-wrapper {
+	position: fixed;
+	top: 80px;
+	left: 0;
+	z-index: 1050;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	outline: 0;
+}
+.modal {
+	z-index: 100;
+	position: relative;
+	margin: auto auto;
+	border-radius: 3px;
+	max-width: 640px;
+}
+.modal-close-button {
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 1;
+	color: #000;
+	cursor: pointer;
+	border: none;
+}
+/*  */
+
+.cus-service-body li {
+	font-size: 16px;
+	line-height: 32px;
+	color: #605c44;
+	font-weight: 400;
+	list-style: decimal;
+	margin-left: 20px;
+}
+
+.cus-service-body a {
+	text-decoration: underline;
+}
+
+.Descrip {
+	padding: 0 0 0 0;
+}
+
+.converted-images {
+	width: 350px;
+	height: 230px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
